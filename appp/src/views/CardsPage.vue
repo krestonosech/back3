@@ -12,6 +12,8 @@
     </div>
     <button @click="register">Оформить заказ</button>
   </div>
+  <SFooter class="foot" />
+
 </template>
 
 <script lang="ts" setup>
@@ -19,6 +21,7 @@ import axios from 'axios';
 import { computed, ref } from 'vue';
 import SHeader from '@/components/SHeader.vue';
 import { useStore } from 'vuex';
+import SFooter from '@/components/SFooter.vue';
   
 const store = useStore();
 const selected = computed(() => store.state.selected);
@@ -51,6 +54,13 @@ async function register() {
 h1 {
   display: flex;
   justify-content: center;
+}
+
+.foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 * {

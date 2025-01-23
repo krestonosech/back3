@@ -28,12 +28,14 @@
           </table>
         </div>
     </div>
+    <SFooter class="foot" />
   </template>
   
   <script lang="ts" setup>
   import axios from 'axios';
   import { onMounted, ref } from 'vue';
   import SHeader from '@/components/SHeader.vue';
+  import SFooter from '@/components/SFooter.vue';
   
   const login = ref(localStorage.getItem('login'))
   const data = ref()
